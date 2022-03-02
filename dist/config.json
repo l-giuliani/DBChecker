@@ -1,0 +1,39 @@
+{
+	"db": {
+		"type": "sqlite",
+		"dbName": "testDb",
+		"ip": "",
+        "port": "",
+        "user": "",
+        "password": ""
+	},
+	"checks": [
+		{
+			"active": true,
+			"type": "date",
+			"field": {
+				"name": "testfield",
+				"step": 5000
+			}
+		},
+		{
+			"active": true,
+			"type": "validation",
+			"field": {
+				"name": "testval",
+				"max": 10,
+				"min": 2
+			}
+		}
+		
+	],
+	"report": [
+		{
+			"active": true,
+			"type": "email",
+			"emailParams": {
+				"sender": "l.giuliani@etgsrl.it"
+			}
+		}
+	]
+}
