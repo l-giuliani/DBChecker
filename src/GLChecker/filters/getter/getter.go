@@ -6,21 +6,12 @@ import (
 )
 
 type Getter struct {
+}
+
+func (g *Getter) FilterFunction() {
 
 }
 
-func (g *Getter) getterFunction() {
-
-}
-
-func (g *Getter) InitGetter (getter configDto.Getter) {
-	fmt.Println(getter.Source)
-}
-
-func (g *Getter) Start () {
-	fmt.Println("Getter started")
-}
-
-func (g *Getter) Stop() {
-
+func (g *Getter) InitFilter (config *configDto.Config) {
+	fmt.Println("Initializing Getter Filter")
 }

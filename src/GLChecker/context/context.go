@@ -1,25 +1,25 @@
 package context
 
 import (
-	getterFilter "GLChecker/filters/getter"
+	filters "GLChecker/filters"
 )
 
 type Context struct {
-	GetterFilter []*getterFilter.Getter
+	Filters []*filters.Filter
 }
 
 var context Context
 var initialized bool = false 
 
 func InitContext () {
-	context.GetterFilter = make([]*getterFilter.Getter, 0)
+	context.Filters = make([]*filters.Filter, 0)
 
 	initialized = true
 }
 
-func AddGetterFilter (getter *getterFilter.Getter) {
+func AddFilter (filter *filters.Filter) {
 	if !initialized {
 		panic("Context not initialized")
 	}
-	context.GetterFilter = append(context.GetterFilter, getter)
+	context.Filters = append(context.Filters, filter)
 }
