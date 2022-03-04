@@ -2,8 +2,9 @@ package dto
 
 type Config struct {
 	Db Db
+	Getters []Getter
 	Checks []Check
-	Report []Report
+	Reports []Report
 }
 
 type Db struct {
@@ -13,6 +14,11 @@ type Db struct {
 	Port		uint
 	User		string
 	Password	string 
+}
+
+type Getter struct {
+	Source string
+    DbName string
 }
 
 type Check struct {

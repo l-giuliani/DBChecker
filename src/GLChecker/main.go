@@ -1,12 +1,9 @@
 package main
 
 import (
-	"fmt"
-	libs "GLChecker/libs"
+	services "GLChecker/services"
 )
 
 func main() {
-	fmt.Println("test")
-	config := libs.GetConfig()
-	fmt.Println(config)
+	services.InitSystem()
 }

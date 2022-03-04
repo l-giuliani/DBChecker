@@ -7,6 +7,12 @@
         "user": "",
         "password": ""
 	},
+    "getters": [
+        {
+            "source": "db",
+            "dbName": "testDb"
+        }
+    ],
 	"checks": [
 		{
 			"active": true,
@@ -27,7 +33,7 @@
 		}
 		
 	],
-	"report": [
+	"reports": [
 		{
 			"active": true,
 			"type": "email",
